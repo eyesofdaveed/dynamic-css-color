@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic CSS Generator for loing</title>
+    <link rel="stylesheet" href="/dynamic-login-form/style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dynamic CSS generator</h1>
+        <p>Pick the color for each login scenario</p>
+        <hr>
+        <ul>
+            <li><span class="df">Default</span> - the login form is empty and haven't been touched</li>
+            <li><span class="er">Error</span> - there might be a typo (ex: unnecessary space)</li>
+            <li><span class="vl">Valid</span> - the login is valid and can be used to authorize (testuser)</li>
+        </ul>
+      </header>
+      <div class="colors">
+        <div class="default">
+          <p class="df">Default</p>
+          <input type="color" value="#f7f7f7" name="" id="default" onchange="changeColor('default', this.value)"/>
+        </div>
+        <div class="error">
+          <p class="er">Error</p>
+          <input type="color" value="#9b0808" name="" id="error" onchange="changeColor('error', this.value)"/>
+        </div>
+        <div class="valid">
+          <p class="vl">Valid</p>
+          <input type="color" value="#28ff28" name="" id="valid" onchange="changeColor('valid', this.value)"/>
+        </div>
+      </div>
+      <form action="" class="my-form">
+        <input type="text" id="login" placeholder="login" oninput="validate(event)"/>
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+    <script src="/dynamic-login-form/script.js"></script>
+  </body>
+</html>
